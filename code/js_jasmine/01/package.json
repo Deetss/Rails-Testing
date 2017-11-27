@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "test": "NODE_ENV=test karma start"
+  },
+  "dependencies": {
+    "@rails/webpacker": "^3.0.2",
+    "coffeescript": "1.12.7",
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "jasmine": "^2.8.0",
+    "jasmine-core": "^2.8.0",
+    "karma": "^1.7.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-mocha-reporter": "^2.2.5",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^2.0.5",
+    "testdouble": "^3.2.6",
+    "testdouble-jasmine": "^0.2.1"
+  }
+}
