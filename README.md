@@ -1,9 +1,6 @@
 # Rails Testing *(test?)*
 #### This is a the code, and work for [Rails 5 Test Prescriptions](https://pragprog.com/book/nrtest3/rails-5-test-prescriptions).
 
-I wanted to improve on my Rails TDD so i got this book. I have done very little testing (mostly with minitest), but i can see how strong this will make my code.
-I will update with notes and other info!
-
 ## Notes:
 
 * Use the TDD process to create and adjust your code’s design
