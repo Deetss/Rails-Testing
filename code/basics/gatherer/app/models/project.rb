@@ -16,6 +16,10 @@ class Project
   def incomplete_tasks
     tasks.reject(&:complete?)
   end
+  
+  def completed_tasks
+    tasks.select(&:complete?)
+  end
 
   def done?
     incomplete_tasks.empty?
@@ -27,5 +31,12 @@ class Project
 
   def remaining_size
     incomplete_tasks.sum(&:size)
+  end
+  
+  def completed_velocity
+    tasks.sum(&:points_toward_velocity)
+  end
+  
+  def current_rate
   end
 end
