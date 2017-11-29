@@ -7,10 +7,15 @@
 # Visit http://www.pragmaticprogrammer.com/titles/nrtest3 for more book information.
 #---
 class Project
-  attr_accessor :tasks
+  attr_accessor :tasks, :due_date
 
   def initialize
     @tasks = []
+    @due_date = nil
+  end
+  
+  def self.velocity_lenght_in_days
+    21
   end
 
   def incomplete_tasks
@@ -38,5 +43,20 @@ class Project
   end
   
   def current_rate
+    completed_velocity.to_f / Project.velocity_lenght_in_days
+  end
+  
+  def projected_days_remaining
+    remaining_size / current_rate
+  end
+  
+  def projected_end_date
+    (Time.now + projected_days_remaining.days)
+  end
+  
+  
+  def on_schedule?
+    return false if projected_days_remaining.nan?
+    projected_end_date <= due_date
   end
 end
