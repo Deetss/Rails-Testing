@@ -18,3 +18,5 @@ complexity on the areas that really need complexity.
 * Choose your test data and test-variable names to make it
 easy to diagnose failures when they happen. Meaningful
 names and data that doesn’t overlap are helpful.
+* Using Capybara allows you to simulate user activity for endto-end
+tests of your Rails features 
