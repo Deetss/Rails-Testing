@@ -14,6 +14,10 @@ class CreatesProject
     
     def create
         build
+        success?
+    end
+    
+    def success?
         project.save
     end
     
