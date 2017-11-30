@@ -20,7 +20,7 @@ easy to diagnose failures when they happen. Meaningful
 names and data that doesn’t overlap are helpful.
 * Using Capybara allows you to simulate user activity for endto-end
 tests of your Rails features 
-* I like placing business logic outside Rails classes. It makes
-Prescription 8 that logic easier to test and manage.
-* Use :aggregate_failures to get the best features of single-assertion
-Prescription 9 and multiple-assertion tests
+* I like placing business logic outside Rails classes. It makes that logic easier to test and manage.
+* Use :aggregate_failures to get the best features of single-assertion and multiple-assertion tests
+* Your tests are also code. Specifically, your tests are code that does not have tests.
+* Think about both the short-term and long-term cost of tests as you write them.
