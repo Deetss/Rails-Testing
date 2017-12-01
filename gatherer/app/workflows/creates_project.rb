@@ -4,6 +4,7 @@ class CreatesProject
     def initialize(name: "", task_string: "")
         @name = name
         @task_string = task_string
+        @success = false
     end
     
     def build
@@ -14,11 +15,11 @@ class CreatesProject
     
     def create
         build
-        success?
+        @success = project.save
     end
     
     def success?
-        project.save
+        @success
     end
     
     def convert_string_to_tasks

@@ -24,3 +24,10 @@ tests of your Rails features
 * Use :aggregate_failures to get the best features of single-assertion and multiple-assertion tests
 * Your tests are also code. Specifically, your tests are code that does not have tests.
 * Think about both the short-term and long-term cost of tests as you write them.
+* TDD Metaprocess: ![alt-text](https://imgur.com/NoDqEc6.png "TDD Process")
+* If you find yourself writing tests that already pass given the
+current state of the code, that often means you’re writing
+too much code in each pass.
+* Refactoring is where a lot of design happens in TDD, and it's easiest to do in sall steps. Skip it at your peril.
+* Try to extract methods when you see compound Booleans, local variables, or inline comments.
+* Expectations that cover different branches of the application logic should be handled in separate specs
