@@ -1,4 +1,4 @@
-# Rails Testing *(test?)*
+# Rails Testing
 #### This is a the code, and work for [Rails 5 Test Prescriptions](https://pragprog.com/book/nrtest3/rails-5-test-prescriptions).
 
 ## Notes:
