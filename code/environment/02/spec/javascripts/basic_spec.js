@@ -7,7 +7,9 @@
  * Visit http://www.pragmaticprogrammer.com/titles/nrtest3 for more book information.
 ***/
 describe("JavaScript testing", () => {
-  it("works", () => {
+    it("works",() =;
+>
+{
     expect(1 + 1).toEqual(2)
   })
 })

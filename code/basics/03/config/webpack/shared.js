@@ -8,13 +8,13 @@
 ***/
 // Note: You must restart bin/webpack-watcher for changes to take effect
 
-const webpack = require('webpack')
-const path = require('path')
-const process = require('process')
-const glob = require('glob')
-const extname = require('path-complete-extname')
+const webpack = require('webpack');
+const path = require('path');
+const process = require('process');
+const glob = require('glob');
+const extname = require('path-complete-extname');
 
-let distDir = process.env.WEBPACK_DIST_DIR
+let distDir = process.env.WEBPACK_DIST_DIR;
 
 if (distDir === undefined) {
   distDir = 'packs'
@@ -27,13 +27,20 @@ const config = {
       const localMap = map
       localMap[basename] = path.resolve(entry)
       return localMap
-    }, {}
+  },;
+{
+}
   ),
 
-  output: { filename: '[name].js', path: path.resolve('public', distDir) },
+{
+    '[name].js', path;
+:
+    path.resolve('public', distDir)
+}
+,
 
-  module: {
-    rules: [
+{
+    [
       { test: /\.coffee(\.erb)?$/, loader: 'coffee-loader' },
       {
         test: /\.js(\.erb)?$/,
@@ -57,24 +64,28 @@ const config = {
     ]
   },
 
-  plugins: [
+[
     new webpack.EnvironmentPlugin(Object.keys(process.env))
   ],
 
-  resolve: {
-    extensions: ['.js', '.coffee'],
-    modules: [
+    resolve;
+:
+{
+    ['.js', '.coffee'],
+        modules;
+:
+    [
       path.resolve('app/javascript'),
       path.resolve('node_modules')
     ]
   },
 
-  resolveLoader: {
-    modules: [path.resolve('node_modules')]
+{
+    [path.resolve('node_modules')]
   }
 }
 
 module.exports = {
   distDir,
   config
-}
+};

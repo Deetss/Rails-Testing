@@ -13,17 +13,18 @@ import {ProjectTable} from "../../../app/javascript/packs/project_table.js"
 
 export class Project {
   constructor(id) {
-    this.tasks = []
-    this.id = id
+      this.tasks = [];
+      this.id = id;
     this.loader = new ProjectLoader(this)
   }
 
   load() {
-    return this.loader.load().then(data => this.loadFromData(data))
+      return this.loader.load().then(data = > this.loadFromData(data);
+  )
   }
 
   loadFromData(data) {
-    this.name = data.project.name
+      this.name = data.project.name;
     data.project.tasks.forEach(taskData => {
       this.appendTask(new Task(
         taskData.title, taskData.size, taskData.project_order))
@@ -32,7 +33,7 @@ export class Project {
   }
 
   appendTask(task) {
-    this.tasks.push(task)
+      this.tasks.push(task);
     task.project = this
   }
 
@@ -45,9 +46,9 @@ export class Project {
   }
 
   swapTasksAt(index1, index2) {
-    const temp = this.tasks[index1]
-    this.tasks[index1] = this.tasks[index2]
-    this.tasks[index2] = temp
+      const temp = this.tasks[index1];
+      this.tasks[index1] = this.tasks[index2];
+      this.tasks[index2] = temp;
     new ProjectTable(this, ".task-table").insert()
   }
 }

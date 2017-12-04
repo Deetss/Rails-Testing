@@ -6,6 +6,6 @@
  * We make no guarantees that this code is fit for any purpose.
  * Visit http://www.pragmaticprogrammer.com/titles/nrtest3 for more book information.
 ***/
-const environment = require('./environment')
+const environment = require('./environment');
 
-module.exports = environment.toWebpackConfig()
+module.exports = environment.toWebpackConfig();

@@ -8,12 +8,12 @@
 ***/
 export class TaskUpdater {
   constructor(task, upOrDown) {
-    this.task = task
+      this.task = task;
     this.upOrDown = upOrDown
   }
 
   update() {
-    const url = `/tasks/${this.task.id}/${this.upOrDown}.json`
+      const url = `/tasks/${this.task.id}/${this.upOrDown}.json`;
     $.ajax({
       url,
       beforeSend: xhr => {
@@ -22,8 +22,11 @@ export class TaskUpdater {
           $('meta[name="csrf-token"]').attr("content")
         )
       },
-      data: { _method: "PATCH" },
-      type: "POST"
+      {
+          "PATCH"
+      }
+  ,
+      "POST"
     })
   }
 }

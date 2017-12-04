@@ -6,8 +6,8 @@
  * We make no guarantees that this code is fit for any purpose.
  * Visit http://www.pragmaticprogrammer.com/titles/nrtest3 for more book information.
 ***/
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const { env } = require('../configuration.js')
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const {env} = require('../configuration.js');
 
 module.exports = {
   test: /\.(scss|sass|css)$/i,
@@ -20,4 +20,4 @@ module.exports = {
       { loader: 'sass-loader', options: { sourceMap: true } }
     ]
   })
-}
+};

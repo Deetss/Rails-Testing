@@ -6,8 +6,8 @@
  * We make no guarantees that this code is fit for any purpose.
  * Visit http://www.pragmaticprogrammer.com/titles/nrtest3 for more book information.
 ***/
-const { environment } = require("@rails/webpacker")
-const webpack = require("webpack")
+const {environment} = require("@rails/webpacker");
+const webpack = require("webpack");
 
 environment.plugins.set(
   "Provide",
@@ -17,6 +17,6 @@ environment.plugins.set(
     jquery: "jquery",
     "window.jQuery": "jquery",
   })
-)
+);
 
-module.exports = environment
+module.exports = environment;

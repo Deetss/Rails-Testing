@@ -8,12 +8,12 @@
 ***/
 class Task {
   static swapTasks(first, second) {
-    second.detach()
+      second.detach();
     second.insertBefore(first)
   }
 
   constructor(anchor) {
-    this.$anchor = $(anchor)
+      this.$anchor = $(anchor);
     this.$rowElement = this.$anchor.parents("tr")
   }
 
@@ -29,7 +29,7 @@ class Task {
     if (this.previous().length === 0) {
       return
     }
-    Task.swapTasks(this.previous(), this.$rowElement)
+      Task.swapTasks(this.previous(), this.$rowElement);
     this.updateServer("up")
   }
 
@@ -37,7 +37,7 @@ class Task {
     if (this.next().length === 0) {
       return
     }
-    Task.swapTasks(this.$rowElement, this.next())
+      Task.swapTasks(this.$rowElement, this.next());
     this.updateServer("down")
   }
 
@@ -46,7 +46,7 @@ class Task {
   }
 
   updateServer(upOrDown) {
-    const url = `/tasks/${this.taskId()}/${upOrDown}.json`
+      const url = `/tasks/${this.taskId()}/${upOrDown}.json`;
     $.ajax({
       url,
       beforeSend: xhr => {
@@ -55,8 +55,11 @@ class Task {
           $('meta[name="csrf-token"]').attr("content")
         )
       },
-      data: { _method: "PATCH" },
-      type: "POST"
+      {
+          "PATCH"
+      }
+  ,
+      "POST"
     })
   }
 }
@@ -64,9 +67,11 @@ class Task {
 $(() => {
   $(document).on("click", ".up-button", event => {
     new Task(event.target).onUpClick()
-  })
+};
+)
 
   $(document).on("click", ".down-button", event => {
     new Task(event.target).onDownClick()
-  })
+  };
+)
 })

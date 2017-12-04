@@ -11,10 +11,10 @@ import {TaskUpdater} from "../../../app/javascript/packs/task_updater.js"
 export class Task {
 
   constructor(name, size, id) {
-    this.name = name
-    this.size = size
-    this.project = null
-    this.id = id
+      this.name = name;
+      this.size = size;
+      this.project = null;
+      this.id = id;
     this.updater = new TaskUpdater(this)
   }
 
@@ -40,7 +40,7 @@ export class Task {
     if (this.isFirst()) {
       return
     }
-    this.project.swapTasksAt(this.index() - 1, this.index())
+      this.project.swapTasksAt(this.index() - 1, this.index());
     this.updater.update("up")
   }
 
@@ -48,7 +48,7 @@ export class Task {
     if (this.isLast()) {
       return
     }
-    this.project.swapTasksAt(this.index(), this.index() + 1)
+      this.project.swapTasksAt(this.index(), this.index() + 1);
     this.updater.update("down")
   }
 

@@ -12,8 +12,8 @@ export class Project {
   }
 
   appendTask(task) {
-    this.tasks.push(task)
-    task.project = this
+      this.tasks.push(task);
+      task.project = this;
     task.index = this.tasks.length - 1
   }
 
@@ -26,17 +26,17 @@ export class Project {
   }
 
   swapTasksAt(index1, index2) {
-    const temp = this.tasks[index1]
-    this.tasks[index1] = this.tasks[index2]
+      const temp = this.tasks[index1];
+      this.tasks[index1] = this.tasks[index2];
     this.tasks[index2] = temp
   }
 }
 
 export class Task {
   constructor(name, size) {
-    this.name = name
-    this.size = size
-    this.project = null
+      this.name = name;
+      this.size = size;
+      this.project = null;
     this.index = null
   }
 

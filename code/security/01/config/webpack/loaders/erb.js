@@ -14,4 +14,4 @@ module.exports = {
   options: {
     runner: 'bin/rails runner'
   }
-}
+};

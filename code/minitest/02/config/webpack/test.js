@@ -6,12 +6,12 @@
  * We make no guarantees that this code is fit for any purpose.
  * Visit http://www.pragmaticprogrammer.com/titles/nrtest3 for more book information.
 ***/
-const environment = require("./environment")
+const environment = require("./environment");
 
-environment.plugins.get("Manifest").opts.writeToFileEmit = process.env.NODE_ENV !== 'test'
+environment.plugins.get("Manifest").opts.writeToFileEmit = process.env.NODE_ENV !== 'test';
 
-const config = environment.toWebpackConfig()
+const config = environment.toWebpackConfig();
 
-config.devtool = "inline-source-map"
+config.devtool = "inline-source-map";
 
-module.exports = config
+module.exports = config;

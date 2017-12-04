@@ -6,10 +6,10 @@
  * We make no guarantees that this code is fit for any purpose.
  * Visit http://www.pragmaticprogrammer.com/titles/nrtest3 for more book information.
 ***/
-const environment = require("./environment")
+const environment = require("./environment");
 
-const config = environment.toWebpackConfig()
+const config = environment.toWebpackConfig();
 
-config.devtool = "source-map"
+config.devtool = "source-map";
 
-module.exports = config
+module.exports = config;

@@ -8,9 +8,9 @@
 ***/
 // Note: You must restart bin/webpack-dev-server for changes to take effect
 
-const merge = require('webpack-merge')
-const sharedConfig = require('./shared.js')
-const { settings, output } = require('./configuration.js')
+const merge = require('webpack-merge');
+const sharedConfig = require('./shared.js');
+const {settings, output} = require('./configuration.js');
 
 module.exports = merge(sharedConfig, {
   devtool: 'cheap-eval-source-map',
@@ -37,4 +37,4 @@ module.exports = merge(sharedConfig, {
       ignored: /node_modules/
     }
   }
-})
+});
