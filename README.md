@@ -31,3 +31,6 @@ too much code in each pass.
 * Refactoring is where a lot of design happens in TDD, and it's easiest to do in sall steps. Skip it at your peril.
 * Try to extract methods when you see compound Booleans, local variables, or inline comments.
 * Expectations that cover different branches of the application logic should be handled in separate specs
+* Fixtures are particularly useful for global semi-static data stored in the database.
+* Your go-to build strategy for factory_bot should be build_stubbed unless there is a need for the object to be in the database during the test.
+* Avoid defining associations automatically in factory_bot definitions. Set them test by test, as needed. You’ll wind up with more manageable test data.

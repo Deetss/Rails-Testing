@@ -30,6 +30,11 @@ group :development, :test do
   gem "rubocop"
   gem "selenium-webdriver"
   gem "chromedriver-helper"
+  gem "factory_bot_rails"
+end
+
+group :test do
+  gem "database_cleaner"
 end
 
 group :development do

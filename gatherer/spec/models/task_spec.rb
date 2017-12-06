@@ -4,6 +4,8 @@ RSpec.describe Task do
 
   let(:task) {Task.new}
 
+  it_should_behave_like 'sizeable'
+
   it 'does not have a new task marked as complete' do
     expect(task).not_to be_complete
   end
