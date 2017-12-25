@@ -4,13 +4,13 @@ RSpec.describe Project do
   describe 'completion' do
     it_should_behave_like 'sizeable'
 
-    describe "without a task" do
+    describe 'without a task' do
       let(:project) { FactoryBot.build_stubbed(:project) }
-      it "considers a project with no tasks to be done" do
+      it 'considers a project with no tasks to be done' do
         expect(project).to be_done
       end
 
-      it "properly estimates a blank project" do
+      it 'properly estimates a blank project' do
         expect(project.completed_velocity).to eq(0)
         expect(project.current_rate).to eq(0)
         expect(project.projected_days_remaining).to be_nan
@@ -18,15 +18,15 @@ RSpec.describe Project do
       end
     end
 
-    describe "With a task" do
+    describe 'With a task' do
       let(:project) { FactoryBot.build_stubbed(:project, tasks: [task]) }
       let(:task) { FactoryBot.build_stubbed(:task) }
 
-      it "knows that a project with an incomplete task is not done" do
+      it 'knows that a project with an incomplete task is not done' do
         expect(project).not_to be_done
       end
 
-      it "marks a project done if its tasks are done" do
+      it 'marks a project done if its tasks are done' do
         task.mark_completed
         expect(project).to be_done
       end
@@ -35,8 +35,8 @@ RSpec.describe Project do
 
   describe 'estimates' do
     let(:project) { FactoryBot.build_stubbed(:project, tasks: [newly_done, old_done, small_not_done, large_not_done]) }
-    let(:newly_done) { FactoryBot.build_stubbed(:task,:newly_complete) }
-    let(:old_done) { FactoryBot.build_stubbed(:task,:long_complete, :small) }
+    let(:newly_done) { FactoryBot.build_stubbed(:task, :newly_complete) }
+    let(:old_done) { FactoryBot.build_stubbed(:task, :long_complete, :small) }
     let(:small_not_done) { FactoryBot.build_stubbed(:task, :small) }
     let(:large_not_done) { FactoryBot.build_stubbed(:task, :large) }
 

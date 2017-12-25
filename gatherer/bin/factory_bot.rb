@@ -1,5 +1,5 @@
-ENV["RAILS_ENV"] ||= "test"
-require File.expand_path("../../config/enviroment", __FILE__)
+ENV['RAILS_ENV'] ||= 'test'
+require File.expand_path('../../config/enviroment', __FILE__)
 begin
   DatabaseCleaner.start
   FactoryBot.lint(traits: true)
