@@ -1,8 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Task do
-
-  let(:task) {Task.new}
+  let(:task) { Task.new }
 
   it_should_behave_like 'sizeable'
 
@@ -16,7 +15,7 @@ RSpec.describe Task do
   end
 
   describe 'velocity' do
-    let(:task) {Task.new(size: 3)}
+    let(:task) { Task.new(size: 3) }
 
     it 'does not count an incomplete task toward velocity' do
       expect(task).not_to be_a_part_of_velocity
@@ -35,6 +34,12 @@ RSpec.describe Task do
       expect(task.points_toward_velocity).to eq(0)
     end
 
-
+    it 'stubs with multipl return values' do
+      task = Task.new
+      allow(task).to receive(:size).and_return(1, 2)
+      assert_equal(1, task.size)
+      assert_equal(2, task.size)
+      assert_equal(2, task.size)
+    end
   end
 end

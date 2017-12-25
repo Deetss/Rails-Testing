@@ -8,8 +8,7 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @workflow = CreatesProject.new(name: params[:project][:name],
-                                   task_string: params[:project][:tasks])
+    @workflow = CreatesProject.new(name: params[:project][:name], task_string: params[:project][:tasks])
     if @workflow.create
       redirect_to projects_path
     else
